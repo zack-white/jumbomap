@@ -77,7 +77,7 @@ export default function MapboxMap() {
 
   // Enhanced state for email sending
   const [status, setStatus] = useState('');
-  // const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [emailResults, setEmailResults] = useState<EmailResults | null>(null);
 
   // On page render, create map and fetch all old clubs w/ for given event.
@@ -423,7 +423,7 @@ export default function MapboxMap() {
   };
 
   const handleSave = async () => {
-    // setIsLoading(true);
+    setIsLoading(true);
     setStatus('Sending invitations...');
     setEmailResults(null);
 
@@ -460,7 +460,7 @@ export default function MapboxMap() {
           : 'Error sending invitations. Please check the console for details.'
       );
     } finally {
-      // setIsLoading(false);
+      setIsLoading(false);
     }
   };
 
