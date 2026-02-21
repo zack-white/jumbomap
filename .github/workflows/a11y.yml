@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: zachkklein/WCAG_PR_Checker@main
         with:
-          APP_DIR: '.'
+          APP_DIR: 'jumbohack2025'
           BUILD_DIR: 'out'
           URLS: '/'
